@@ -3,16 +3,16 @@ class Producto(val codigo: String, val nombre: String, var precio: Double, var c
     fun vender(cantidad: Int) {
         if (cantidad > 0 && cantidad <= capacidad) {
             capacidad -= cantidad
-            println("Venta realizada. Stock actual: $capacidad")
+            println("Venta realizada. cantidad actual: $capacidad")
         } else {
-            println("No hay suficiente stock disponible")
+            println("No hay suficiente cantidad disponible")
         }
     }
 
     fun reponerCantidad(cantidad: Int) {
         if (cantidad > 0) {
             capacidad += cantidad
-            println("cantidad renovada\n Nuevo stock: $capacidad")
+            println("cantidad renovada\n Nueva capacidad: $capacidad")
         }
     }
 
